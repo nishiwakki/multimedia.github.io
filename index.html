@@ -4,15 +4,11 @@
   </head>
   <body>
     <h1>TOP</h1>
-    <a-scene vr-mode-ui="enabled: false">
-      <a-box 
-        position="0 0 -3" 
-        rotation="0 45 0" 
-        color="#4CC3D9"
-        animation="property: rotation; from: 0 0 0; to: 360 360 0; loop: true; dur: 3000; easing: linear"
-      ></a-box>
-      <a-entity camera></a-entity>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="shrine" src="gle_data/shrine_ao.glb"></a-asset-item>
+      </a-assets>
+      <a-gltf-model src="#shrine" position="0 0.5 -2" rotation="0 -45 0" scale="0.2 0.2 0.2"></a-gltf-model>
     </a-scene>
-    <h1>BOTTOM</h1>
   </body>
 </html>
